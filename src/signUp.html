@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cabitas</title>
+    <link href="./css/output.css" rel="stylesheet" />
+  </head>
+
+  <body class="md:bg-gray-100 h-screen">
+    <!-- ====== Forms Section Start -->
+    <section class="py-24 md:py-16">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap">
+          <div class="w-full">
+            <div
+              class="relative mx-auto max-w-screen-md overflow-hidden rounded-lg bg-white px-10 py-16 text-center sm:px-12 md:px-[60px]"
+            >
+              <div class="mb-10 text-center md:mb-16">
+                <a
+                  href="./index.html"
+                  class="mx-auto inline-block max-w-[160px]"
+                >
+                  <img
+                    src="https://fw-capsule.yazalim.com/cdn/assets/capsule/images/logo.png.webp"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+              <div class="flex flex-col md:flex-row w-full md:gap-6">
+                <form class="w-full md:w-1/2">
+                  <div class="mb-6">
+                    <input
+                      type="text"
+                      placeholder="Ad Soyad"
+                      class="w-full rounded-md border border-stroke bg-transparent px-5 py-3 text-base outline-none focus:border-blue-700 focus-visible:shadow-none"
+                    />
+                  </div>
+
+                  <div class="mb-6 relative w-full inline-block">
+                    <input
+                      type="text"
+                      placeholder="Telefon"
+                      class="w-full rounded-md border border-stroke bg-transparent pr-5 pl-11 py-3 text-base outline-none focus:border-blue-700 focus-visible:shadow-none"
+                    />
+
+                    <div
+                      class="flex items-center md:order-2 space-x-1 md:space-x-0 absolute left-1 bottom-0 top-0 z-10"
+                    >
+                      <button
+                        id="dropdown-menu-toggle"
+                        type="button"
+                        class="inline-flex flex-row items-center font-medium justify-center text-center py-3 px-2 text-sm text-gray-900 rounded-lg cursor-pointer hover:bg-gray-100"
+                      >
+                        <img
+                          id="img"
+                          src="../public/assets/images/flag-tr-svgrepo-com.svg"
+                          class="w-4 h-4 mx-1 z-0 pointer-events-none"
+                        />
+                      </button>
+                      <!-- Dropdown -->
+                      <div
+                        class="z-30 hidden absolute top-0 left-0 mt-12 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow"
+                        id="language-dropdown-menu"
+                      >
+                        <ul class="py-2 font-medium" role="none">
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 text-sm text-gray-400 hover:bg-gray-600 hover:text-white"
+                              role="menuitem"
+                            >
+                              <div class="inline-flex items-center">
+                                <img
+                                  src="../public/assets/images/flag-tr-svgrepo-com.svg"
+                                  class="w-4 h-4 mr-2"
+                                />
+                                Türkiye <span class="mx-2">+39</span>
+                              </div>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 text-sm text-gray-400 hover:bg-gray-600 hover:text-white"
+                              role="menuitem"
+                            >
+                              <div class="inline-flex items-center">
+                                <img
+                                  src="../public/assets/images/flag-um-svgrepo-com.svg"
+                                  class="w-4 h-4 mr-2"
+                                />
+                                English<span class="mx-2">+1</span>
+                              </div>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 text-sm text-gray-400 hover:bg-gray-600 hover:text-white"
+                              role="menuitem"
+                            >
+                              <div class="inline-flex items-center">
+                                <img
+                                  src="../public/assets/images/flag-for-flag-germany-svgrepo-com.svg"
+                                  class="w-4 h-4 mr-2"
+                                />
+                                Deutsch<span class="mx-2">+49</span>
+                              </div>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 text-sm text-gray-400 hover:bg-gray-600 hover:text-white"
+                              role="menuitem"
+                            >
+                              <div class="inline-flex items-center">
+                                <img
+                                  src="../public/assets/images/flag-for-flag-italy-svgrepo-com.svg"
+                                  class="w-4 h-4 mr-2"
+                                />
+                                Italiano<span class="mx-2">+39</span>
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mb-6 relative w-full inline-block">
+                    <input
+                      type="text"
+                      placeholder="Telefon"
+                      class="w-full rounded-md border border-stroke bg-transparent pr-5 pl-11 py-3 text-base outline-none focus:border-blue-700 focus-visible:shadow-none"
+                    />
+
+                    <div
+                      class="flex items-center md:order-2 space-x-1 md:space-x-0 absolute left-1 bottom-0 top-0 z-0"
+                    >
+                      <button
+                        type="button"
+                        id="dropdown-menu-toggle1"
+                        class="inline-flex flex-row items-center font-medium justify-center text-center py-3 px-2 text-sm text-gray-900 rounded-lg cursor-pointer hover:bg-gray-100"
+                      >
+                        <img
+                          id="img1"
+                          src="../public/assets/images/flag-tr-svgrepo-com.svg"
+                          class="w-4 h-4 mx-1 pointer-events-none"
+                        />
+                      </button>
+                      <!-- Dropdown -->
+                      <div
+                        class="z-30 hidden absolute top-0 left-0 mt-12 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow"
+                        id="language-dropdown-menu1"
+                      >
+                        <ul class="py-2 font-medium" role="none">
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 text-sm text-gray-400 hover:bg-gray-600 hover:text-white"
+                              role="menuitem"
+                            >
+                              <div class="inline-flex items-center">
+                                <img
+                                  src="../public/assets/images/flag-tr-svgrepo-com.svg"
+                                  class="w-4 h-4 mr-2"
+                                />
+                                Türkiye <span class="mx-2">+39</span>
+                              </div>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 text-sm text-gray-400 hover:bg-gray-600 hover:text-white"
+                              role="menuitem"
+                            >
+                              <div class="inline-flex items-center">
+                                <img
+                                  src="../public/assets/images/flag-um-svgrepo-com.svg"
+                                  class="w-4 h-4 mr-2"
+                                />
+                                English<span class="mx-2">+1</span>
+                              </div>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 text-sm text-gray-400 hover:bg-gray-600 hover:text-white"
+                              role="menuitem"
+                            >
+                              <div class="inline-flex items-center">
+                                <img
+                                  src="../public/assets/images/flag-for-flag-germany-svgrepo-com.svg"
+                                  class="w-4 h-4 mr-2"
+                                />
+                                Deutsch<span class="mx-2">+49</span>
+                              </div>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 text-sm text-gray-400 hover:bg-gray-600 hover:text-white"
+                              role="menuitem"
+                            >
+                              <div class="inline-flex items-center">
+                                <img
+                                  src="../public/assets/images/flag-for-flag-italy-svgrepo-com.svg"
+                                  class="w-4 h-4 mr-2"
+                                />
+                                Italiano<span class="mx-2">+39</span>
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-6">
+                    <input
+                      type="text"
+                      placeholder="Firma"
+                      class="w-full rounded-md border border-stroke bg-transparent px-5 py-3 text-base outline-none focus:border-blue-700 focus-visible:shadow-none"
+                    />
+                  </div>
+                </form>
+                <form class="w-full md:w-1/2">
+                  <div class="mb-6">
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      class="w-full rounded-md border border-stroke bg-transparent px-5 py-3 text-base outline-none focus:border-blue-700 focus-visible:shadow-none"
+                    />
+                  </div>
+                  <div class="mb-6 relative w-full text-center">
+                    <input
+                      id="password1"
+                      type="password"
+                      placeholder="Password"
+                      class="w-full rounded-md border border-stroke bg-transparent px-5 py-3 text-base outline-none focus:border-blue-700 focus-visible:shadow-none"
+                    /><span
+                      id="password-toggle1"
+                      class="absolute right-3 cursor-pointer py-3"
+                      onclick="togglePasswordVisibility()"
+                      >👁️</span
+                    >
+                  </div>
+                  <div class="mb-6 relative w-full text-center">
+                    <input
+                      id="password2"
+                      type="password"
+                      placeholder="Password"
+                      class="w-full rounded-md border border-stroke bg-transparent px-5 py-3 text-base outline-none focus:border-blue-700 focus-visible:shadow-none"
+                    /><span
+                      id="password-toggle2"
+                      class="absolute right-3 cursor-pointer py-3"
+                      onclick="togglePasswordVisibility2()"
+                      >👁️</span
+                    >
+                  </div>
+                  <div class="mb-10">
+                    <input
+                      type="submit"
+                      value="Kayıt Ol"
+                      class="w-full cursor-pointer rounded-md border border-primary bg-blue-700 px-5 py-3 text-base font-medium text-white transition hover:bg-opacity-90"
+                    />
+                  </div>
+                </form>
+              </div>
+
+              <div>
+                <span class="absolute right-1 top-1">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="1.39737"
+                      cy="38.6026"
+                      r="1.39737"
+                      transform="rotate(-90 1.39737 38.6026)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="1.39737"
+                      cy="1.99122"
+                      r="1.39737"
+                      transform="rotate(-90 1.39737 1.99122)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="13.6943"
+                      cy="38.6026"
+                      r="1.39737"
+                      transform="rotate(-90 13.6943 38.6026)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="13.6943"
+                      cy="1.99122"
+                      r="1.39737"
+                      transform="rotate(-90 13.6943 1.99122)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="25.9911"
+                      cy="38.6026"
+                      r="1.39737"
+                      transform="rotate(-90 25.9911 38.6026)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="25.9911"
+                      cy="1.99122"
+                      r="1.39737"
+                      transform="rotate(-90 25.9911 1.99122)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="38.288"
+                      cy="38.6026"
+                      r="1.39737"
+                      transform="rotate(-90 38.288 38.6026)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="38.288"
+                      cy="1.99122"
+                      r="1.39737"
+                      transform="rotate(-90 38.288 1.99122)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="1.39737"
+                      cy="26.3057"
+                      r="1.39737"
+                      transform="rotate(-90 1.39737 26.3057)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="13.6943"
+                      cy="26.3057"
+                      r="1.39737"
+                      transform="rotate(-90 13.6943 26.3057)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="25.9911"
+                      cy="26.3057"
+                      r="1.39737"
+                      transform="rotate(-90 25.9911 26.3057)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="38.288"
+                      cy="26.3057"
+                      r="1.39737"
+                      transform="rotate(-90 38.288 26.3057)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="1.39737"
+                      cy="14.0086"
+                      r="1.39737"
+                      transform="rotate(-90 1.39737 14.0086)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="13.6943"
+                      cy="14.0086"
+                      r="1.39737"
+                      transform="rotate(-90 13.6943 14.0086)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="25.9911"
+                      cy="14.0086"
+                      r="1.39737"
+                      transform="rotate(-90 25.9911 14.0086)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="38.288"
+                      cy="14.0086"
+                      r="1.39737"
+                      transform="rotate(-90 38.288 14.0086)"
+                      fill="#3056D3"
+                    />
+                  </svg>
+                </span>
+                <span class="absolute bottom-1 left-1">
+                  <svg
+                    width="29"
+                    height="40"
+                    viewBox="0 0 29 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="2.288"
+                      cy="25.9912"
+                      r="1.39737"
+                      transform="rotate(-90 2.288 25.9912)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="14.5849"
+                      cy="25.9911"
+                      r="1.39737"
+                      transform="rotate(-90 14.5849 25.9911)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="26.7216"
+                      cy="25.9911"
+                      r="1.39737"
+                      transform="rotate(-90 26.7216 25.9911)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="2.288"
+                      cy="13.6944"
+                      r="1.39737"
+                      transform="rotate(-90 2.288 13.6944)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="14.5849"
+                      cy="13.6943"
+                      r="1.39737"
+                      transform="rotate(-90 14.5849 13.6943)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="26.7216"
+                      cy="13.6943"
+                      r="1.39737"
+                      transform="rotate(-90 26.7216 13.6943)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="2.288"
+                      cy="38.0087"
+                      r="1.39737"
+                      transform="rotate(-90 2.288 38.0087)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="2.288"
+                      cy="1.39739"
+                      r="1.39737"
+                      transform="rotate(-90 2.288 1.39739)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="14.5849"
+                      cy="38.0089"
+                      r="1.39737"
+                      transform="rotate(-90 14.5849 38.0089)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="26.7216"
+                      cy="38.0089"
+                      r="1.39737"
+                      transform="rotate(-90 26.7216 38.0089)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="14.5849"
+                      cy="1.39761"
+                      r="1.39737"
+                      transform="rotate(-90 14.5849 1.39761)"
+                      fill="#3056D3"
+                    />
+                    <circle
+                      cx="26.7216"
+                      cy="1.39761"
+                      r="1.39737"
+                      transform="rotate(-90 26.7216 1.39761)"
+                      fill="#3056D3"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Forms Section End -->
+    <script>
+      function togglePasswordVisibility() {
+        const passwordInput = document.getElementById("password1");
+        const toggleIcon = document.getElementById("password-toggle1");
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          toggleIcon.textContent = "🙈"; // Change the icon to a closed eye
+        } else {
+          passwordInput.type = "password";
+          toggleIcon.textContent = "👁️"; // Change the icon back to an open eye
+        }
+      }
+      function togglePasswordVisibility2() {
+        const passwordInput = document.getElementById("password2");
+        const toggleIcon = document.getElementById("password-toggle2");
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          toggleIcon.textContent = "🙈"; // Change the icon to a closed eye
+        } else {
+          passwordInput.type = "password";
+          toggleIcon.textContent = "👁️"; // Change the icon back to an open eye
+        }
+      }
+    </script>
+  </body>
+  <script src="./js/script.js"></script>
+  <script src="./js/signScript.js"></script>
+</html>
