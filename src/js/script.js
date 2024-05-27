@@ -40,8 +40,14 @@ function isClickOutside(element, resourcesDiv, resourcesButton) {
 document.addEventListener('DOMContentLoaded', () => {
     toggleShow('navbarToggler', 'navbarCollapse');
     toggleShow('resourcesButton', 'resourcesDiv');
-    toggleShow('modalButton', 'default-modal')
+
     toggleShow('modalClose', 'default-modal')
+    toggleShow('modalButton1', 'default-modal')
+    toggleShow('modalButton2', 'default-modal')
+    toggleShow('modalButton3', 'default-modal')
+    toggleShow('modalButton4', 'default-modal')
+    toggleShow('modalButton5', 'default-modal')
+    toggleShow('modalButton6', 'default-modal')
 
 
     const resourcesButton = document.getElementById('resourcesButton');
