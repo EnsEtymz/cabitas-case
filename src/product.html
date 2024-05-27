@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cabitas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      .zoom-container {
+        overflow: hidden;
+        position: relative;
+      }
+      .zoom-container img {
+        transition: transform 0.5s ease;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-200 flex flex-col justify-between">
+    <!-- Header -->
+    <nav class="bg-gray-700">
+      <div class="w-full px-2 md:px-12 lg:px-24 py-3 mx-auto">
+        <div class="flex justify-between items-center">
+          <ul
+            class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm"
+          >
+            <li>
+              <a href="#" class="text-white hover:underline" aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-white hover:underline">Company</a>
+            </li>
+            <li>
+              <a href="#" class="text-white hover:underline">Team</a>
+            </li>
+            <li>
+              <a href="#" class="text-white hover:underline">Features</a>
+            </li>
+          </ul>
+          <ul
+            class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm"
+          >
+            <li>
+              <a
+                href="#"
+                class="text-gray-900 dark:text-white hover:underline"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-900 dark:text-white hover:underline"
+                >Sipariş Takip</a
+              >
+            </li>
+            <li>
+              <a
+                href="./signUp.html"
+                class="text-gray-900 dark:text-white hover:underline"
+                >Kayıt Ol</a
+              >
+            </li>
+            <li>
+              <a
+                href="./signIn.html"
+                class="text-gray-900 dark:text-white hover:underline"
+                >Giriş Yap</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header class="flex bg-white px-2 md:px-12 lg:px-24">
+      <nav class="w-full bg-white border-gray-200">
+        <div
+          class="w-full flex flex-wrap items-center justify-between mx-auto py-4"
+        >
+          <a href="./index.html" class="flex items-center space-x-3">
+            <img
+              src="https://fw-capsule.yazalim.com/cdn/assets/capsule/images/logo.png.webp"
+              alt="logo"
+              class="h-10"
+            />
+          </a>
+          <div class="flex items-center md:order-2 space-x-1 md:space-x-0">
+            <button
+              type="button"
+              data-dropdown-toggle="language-dropdown-menu"
+              class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 rounded-lg cursor-pointer hover:bg-gray-100"
+            >
+              <img
+                src="./assets/images/flag-tr-svgrepo-com.svg"
+                class="w-4 h-4 mr-2"
+              />
+              Türkçe
+            </button>
+            <!-- Dropdown -->
+            <div
+              class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow"
+              id="language-dropdown-menu"
+            >
+              <ul class="py-2 font-medium" role="none">
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    role="menuitem"
+                  >
+                    <div class="inline-flex items-center">
+                      <svg
+                        aria-hidden="true"
+                        class="h-3.5 w-3.5 rounded-full me-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="flag-icon-css-us"
+                        viewBox="0 0 512 512"
+                      >
+                        <g fill-rule="evenodd">
+                          <g stroke-width="1pt">
+                            <path
+                              fill="#bd3d44"
+                              d="M0 0h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
+                              transform="scale(3.9385)"
+                            />
+                            <path
+                              fill="#fff"
+                              d="M0 10h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
+                              transform="scale(3.9385)"
+                            />
+                          </g>
+                          <path
+                            fill="#192f5d"
+                            d="M0 0h98.8v70H0z"
+                            transform="scale(3.9385)"
+                          />
+                          <path
+                            fill="#fff"
+                            d="M8.2 3l1 2.8H12L9.7 7.5l.9 2.7-2.4-1.7L6 10.2l.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7L74 8.5l-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 7.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 24.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 21.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 38.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 35.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 52.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 49.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 66.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 63.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9z"
+                            transform="scale(3.9385)"
+                          />
+                        </g>
+                      </svg>
+                      English (US)
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    role="menuitem"
+                  >
+                    <div class="inline-flex items-center">
+                      <svg
+                        class="h-3.5 w-3.5 rounded-full me-2"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="flag-icon-css-de"
+                        viewBox="0 0 512 512"
+                      >
+                        <path fill="#ffce00" d="M0 341.3h512V512H0z" />
+                        <path d="M0 0h512v170.7H0z" />
+                        <path fill="#d00" d="M0 170.7h512v170.6H0z" />
+                      </svg>
+                      Deutsch
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    role="menuitem"
+                  >
+                    <div class="inline-flex items-center">
+                      <svg
+                        class="h-3.5 w-3.5 rounded-full me-2"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="flag-icon-css-it"
+                        viewBox="0 0 512 512"
+                      >
+                        <g fill-rule="evenodd" stroke-width="1pt">
+                          <path fill="#fff" d="M0 0h512v512H0z" />
+                          <path fill="#009246" d="M0 0h170.7v512H0z" />
+                          <path fill="#ce2b37" d="M341.3 0H512v512H341.3z" />
+                        </g>
+                      </svg>
+                      Italiano
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    role="menuitem"
+                  >
+                    <div class="inline-flex items-center">
+                      <svg
+                        class="h-3.5 w-3.5 rounded-full me-2"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        id="flag-icon-css-cn"
+                        viewBox="0 0 512 512"
+                      >
+                        <defs>
+                          <path
+                            id="a"
+                            fill="#ffde00"
+                            d="M1-.3L-.7.8 0-1 .6.8-1-.3z"
+                          />
+                        </defs>
+                        <path fill="#de2910" d="M0 0h512v512H0z" />
+                        <use
+                          width="30"
+                          height="20"
+                          transform="matrix(76.8 0 0 76.8 128 128)"
+                          xlink:href="#a"
+                        />
+                        <use
+                          width="30"
+                          height="20"
+                          transform="rotate(-121 142.6 -47) scale(25.5827)"
+                          xlink:href="#a"
+                        />
+                        <use
+                          width="30"
+                          height="20"
+                          transform="rotate(-98.1 198 -82) scale(25.6)"
+                          xlink:href="#a"
+                        />
+                        <use
+                          width="30"
+                          height="20"
+                          transform="rotate(-74 272.4 -114) scale(25.6137)"
+                          xlink:href="#a"
+                        />
+                        <use
+                          width="30"
+                          height="20"
+                          transform="matrix(16 -19.968 19.968 16 256 230.4)"
+                          xlink:href="#a"
+                        />
+                      </svg>
+                      中文 (繁體)
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <button
+              data-collapse-toggle="navbar-language"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400"
+              aria-controls="navbar-language"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-language"
+          >
+            <ul
+              class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--Header End-->
+
+    <section class="px-2 py-7 md:px-12 lg:px-24">
+      <div
+        class="w-full flex flex-col md:flex-row rounded-t-lg bg-white h-[1024px] md:h-[560px]"
+      >
+        <div class="w-full h-1/2 md:h-full md:w-1/2 p-4 grid gap-4">
+          <div class="zoom-container h-[351px] w-full rounded-lg">
+            <img
+              id="image"
+              class="h-[351px] w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg"
+              alt=""
+            />
+          </div>
+          <div class="grid grid-cols-5 gap-4" id="gallery">
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg cursor-pointer hover:scale-110 duration-200"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg cursor-pointer hover:scale-110 duration-200"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg cursor-pointer hover:scale-110 duration-200"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg cursor-pointer hover:scale-110 duration-200"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg cursor-pointer hover:scale-110 duration-200"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full h-1/2 md:h-full md:w-1/2 px-4 pb-4 flex flex-col justify-around"
+        >
+          <div class="flex flex-col gap-5 p-4">
+            <p class="text-3xl font-semibold">
+              Chemex Coffeemaker 3 Cup consetetur sadipscing elit
+            </p>
+
+            <div class="relative flex flex-row gap-1 h-44">
+              <div class="w-1/2 flex flex-col gap-2">
+                <div class="w-full text-sm text-left border shadow-sm max-h-32">
+                  <div
+                    class="w-full bg-gray-100 py-2 text-center flex justify-center font-bold text-black"
+                  >
+                    Uyumlu Markalar
+                  </div>
+                  <div class="overflow-y-auto h-[90px]">
+                    <p
+                      class="px-6 py-1 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      SCANIA
+                    </p>
+                    <p
+                      class="px-6 py-1 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      VOLVO
+                    </p>
+                    <p
+                      class="px-6 py-1 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      MERCEDES
+                    </p>
+                  </div>
+                </div>
+                <div class="w-full flex flex-row justify-between">
+                  <div class="w-36 text-sm text-left border shadow-sm max-h-32">
+                    <div
+                      class="w-full bg-gray-100 py-2 text-center flex justify-center font-bold text-black"
+                    >
+                      SCANIA
+                    </div>
+
+                    <p
+                      class="h-8 text-center py-1 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      1348919S
+                    </p>
+                  </div>
+                  <div class="w-36 text-sm text-left border shadow-sm max-h-32">
+                    <div
+                      class="w-full bg-gray-100 py-2 text-center flex justify-center font-bold text-black"
+                    >
+                      VOLVO
+                    </div>
+
+                    <p
+                      class="h-8 text-center py-1 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      1080437S
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="w-full md:w-1/2 text-sm text-left text-gray-500 border-l flex flex-col justify-between lg:py-2"
+              >
+                <div
+                  class="w-full flex flex-row justify-between py-2 px-4 lg:px-8"
+                >
+                  <p class="font-bold text-black">Liste Fiyatı</p>
+                  <p class="font-medium">45,00 TL</p>
+                </div>
+                <div
+                  class="w-full flex flex-row justify-between py-2 px-4 lg:px-8"
+                >
+                  <p class="font-bold text-black">İskonto Oranı</p>
+                  <p class="font-medium">4,50 TL (%10)</p>
+                </div>
+                <div
+                  class="w-full flex flex-row justify-between py-2 px-4 lg:px-8"
+                >
+                  <p class="font-bold text-black">Liste Kampanya Fiyatı</p>
+                  <p class="font-bold text-blue-700">40,50 TL</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-4">
+            <div
+              class="w-full h-12 shadow-sm rounded-lg focus:outline-none border flex flex-row justify-between mb-2"
+            >
+              <button
+                id="decreaseBtn"
+                class="w-1/3 h-12 bg-gray-200 rounded-l-lg text-center items-center font-extrabold hover:opacity-90 flex justify-center"
+              >
+                <i class="fa-solid fa-minus self-center"></i>
+              </button>
+              <div
+                id="counter"
+                class="font-medium text-center items-center flex flex-col justify-center w-1/3"
+              >
+                1
+              </div>
+              <button
+                id="increaseBtn"
+                class="w-1/3 h-12 bg-gray-200 rounded-r-lg text-center items-center font-extrabold hover:opacity-90 flex justify-center"
+              >
+                <i class="fa-solid fa-plus self-center"></i>
+              </button>
+            </div>
+            <button
+              type="button"
+              class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm py-4 mb-2 focus:outline-none"
+            >
+              <i class="fa-solid fa-basket-shopping mr-3"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        id="default-styled-tab-content"
+        class="bg-white rounded-b-lg p-4 pb-8"
+      >
+        <div class="bg-white">
+          <ul
+            class="flex flex-wrap -mb-px text-sm font-medium text-center"
+            id="default-styled-tab"
+            data-tabs-toggle="#default-styled-tab-content"
+            data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500"
+            data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+            role="tablist"
+          >
+            <li class="me-2" role="presentation">
+              <button
+                class="inline-block p-4 border-b-2 rounded-t-lg"
+                id="profile-styled-tab"
+                data-tabs-target="#styled-profile"
+                type="button"
+                role="tab"
+                aria-controls="profile"
+                aria-selected="false"
+              >
+                Ürün Özellikleri
+              </button>
+            </li>
+            <li class="me-2" role="presentation">
+              <button
+                class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                id="dashboard-styled-tab"
+                data-tabs-target="#styled-dashboard"
+                type="button"
+                role="tab"
+                aria-controls="dashboard"
+                aria-selected="false"
+              >
+                Değerlendirmeler
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div id="styled-profile" role="tabpanel" aria-labelledby="profile-tab">
+          <p class="text-sm text-gray-500 px-2 py-4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Voluptatibus debitis delectus vel? Ipsam quam suscipit tempore quia
+            velit? Ducimus aliquam id vitae esse possimus libero sunt debitis
+            saepe, eius, totam itaque dolor, molestiae animi pariatur porro.
+            Illum maxime similique ipsum, excepturi eius culpa, ex praesentium
+            ullam quia laboriosam eveniet, tenetur facilis esse aspernatur hic
+            ipsa iusto? Nulla optio repellat consectetur quis debitis, amet
+            consequuntur? Laboriosam delectus, officia error nam quos
+            perspiciatis quae nulla, corrupti obcaecati laudantium voluptas
+            expedita beatae. Distinctio sed hic sapiente eos, tempora
+            consectetur eaque. Quo aperiam velit inventore nihil provident qui
+            dolore modi, odit ut soluta deserunt.
+          </p>
+          <p class="text-sm text-gray-500 px-2 py-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+            quos tempora voluptates perspiciatis earum consequuntur repellendus
+            soluta officiis recusandae officia aliquid fugit illo architecto
+            repellat adipisci omnis labore. Praesentium, voluptatem?
+          </p>
+        </div>
+        <div
+          class="hidden p-4 rounded-lg"
+          id="styled-dashboard"
+          role="tabpanel"
+          aria-labelledby="dashboard-tab"
+        >
+          <div class="flex flex-col md:flex-row w-full gap-5">
+            <div class="w-full md:w-1/2 flex flex-col gap-3 h-80">
+              <div
+                class="w-full bg-slate-50 rounded-lg h-12 flex flex-row items-center px-1 md:px-4 justify-between text-xs lg:text-sm"
+              >
+                <div
+                  class="font-medium flex flex-row gap-1 lg:gap-3 items-center text-center"
+                >
+                  <div class="flex items-center space-x-1">
+                    <svg
+                      class="w-4 h-4 text-yellow-300"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 22 20"
+                    >
+                      <path
+                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                      />
+                    </svg>
+                    <svg
+                      class="w-4 h-4 text-yellow-300"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 22 20"
+                    >
+                      <path
+                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                      />
+                    </svg>
+                    <svg
+                      class="w-4 h-4 text-yellow-300"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 22 20"
+                    >
+                      <path
+                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                      />
+                    </svg>
+                    <svg
+                      class="w-4 h-4 text-yellow-300"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 22 20"
+                    >
+                      <path
+                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                      />
+                    </svg>
+                    <svg
+                      class="w-4 h-4 text-gray-200"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 22 20"
+                    >
+                      <path
+                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                      />
+                    </svg>
+                  </div>
+                  <span> 4.0</span>
+                  <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <span> 2 Değerlendirme</span>
+                </div>
+                <span class="font-medium cursor-pointer hover:font-bold"
+                  >Tümünü Gör</span
+                >
+              </div>
+              <div class="w-full h-32 border shadow rounded-lg p-4">
+                <p class="font-medium mb-2 text-xs lg:text-sm">
+                  Kaliteli Malzeme & Hızlı Teslimat
+                </p>
+                <p class="text-xs lg:text-sm">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+                  possimus nesciunt officiis sequi, voluptas impedit explicabo!
+                  Quidem cumque officia quos.
+                </p>
+              </div>
+              <div class="w-full h-32 border shadow rounded-lg p-4">
+                <p class="font-medium mb-2 text-xs lg:text-sm">
+                  Kaliteli Malzeme & Hızlı Teslimat
+                </p>
+                <p class="text-xs lg:text-sm">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+                  possimus nesciunt officiis sequi, voluptas impedit explicabo!
+                  Quidem cumque officia quos.
+                </p>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col gap-3 h-80">
+              <div
+                class="w-full bg-slate-50 rounded-lg h-12 flex flex-row items-center px-4 justify-between"
+              >
+                <span class="font-medium text-xs lg:text-sm"> Yorum Yap</span>
+              </div>
+
+              <form class="flex flex-col gap-3">
+                <div class="flex flex-col gap-2">
+                  <div>
+                    <label
+                      for="message"
+                      class="block mb-2 text-sm font-medium text-gray-900"
+                      >Your message</label
+                    >
+                    <textarea
+                      id="message"
+                      rows="4"
+                      class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                      placeholder="Write your thoughts here..."
+                    ></textarea>
+                  </div>
+                  <div class="flex gap-3">
+                    <div class="w-1/2">
+                      <label
+                        for="first_name"
+                        class="block mb-2 text-sm font-medium text-gray-900 e"
+                        >First name</label
+                      >
+                      <input
+                        type="text"
+                        id="first_name"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                        placeholder="John"
+                        required
+                      />
+                    </div>
+                    <div class="w-1/2">
+                      <label
+                        for="last_name"
+                        class="block mb-2 text-sm font-medium text-gray-900"
+                        >Last name</label
+                      >
+                      <input
+                        type="text"
+                        id="last_name"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                        placeholder="Doe"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Footer Section Start -->
+    <footer
+      class="flex relative z-10 bg-white pb-10 pt-14 lg:pb-20 lg:pt-32 px-2 md:px-12 lg:px-24"
+    >
+      <div class="container mx-auto">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 sm:w-2/3 lg:w-3/12">
+            <div class="mb-10 w-full">
+              <a
+                href="javascript:void(0)"
+                class="mb-6 inline-block max-w-[160px]"
+              >
+                <img
+                  src="https://fw-capsule.yazalim.com/cdn/assets/capsule/images/logo.png.webp"
+                  alt="logo"
+                  class="max-w-full"
+                />
+              </a>
+              <p class="mb-7 text-sm text-body-color">
+                1989 yılından bu yana İstanbul ve Konya’da bulunan ofislerimizin
+                yanı sıra Remote iş modelimiz ile kesintisiz hizmet veriyoruz.
+                Alanında uzman kişilerden oluşan profesyonel kadromuzla
+                Türkiye’nin yerli sermayeli en büyük yazılım şirketlerinden
+                biriyiz.
+              </p>
+              <p class="flex items-center text-sm font-bold text-dark">
+                <span class="mr-3 text-primary">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_941_15626)">
+                      <path
+                        d="M15.1875 19.4688C14.3438 19.4688 13.375 19.25 12.3125 18.8438C10.1875 18 7.84377 16.375 5.75002 14.2813C3.65627 12.1875 2.03127 9.84377 1.18752 7.68752C0.250019 5.37502 0.343769 3.46877 1.43752 2.40627C1.46877 2.37502 1.53127 2.34377 1.56252 2.31252L4.18752 0.750025C4.84377 0.375025 5.68752 0.562525 6.12502 1.18752L7.96877 3.93753C8.40627 4.59378 8.21877 5.46877 7.59377 5.90627L6.46877 6.68752C7.28127 8.00002 9.59377 11.2188 13.2813 13.5313L13.9688 12.5313C14.5 11.7813 15.3438 11.5625 16.0313 12.0313L18.7813 13.875C19.4063 14.3125 19.5938 15.1563 19.2188 15.8125L17.6563 18.4375C17.625 18.5 17.5938 18.5313 17.5625 18.5625C17 19.1563 16.1875 19.4688 15.1875 19.4688ZM2.37502 3.46878C1.78127 4.12503 1.81252 5.46877 2.50002 7.18752C3.28127 9.15627 4.78127 11.3125 6.75002 13.2813C8.68752 15.2188 10.875 16.7188 12.8125 17.5C14.5 18.1875 15.8438 18.2188 16.5313 17.625L18.0313 15.0625C18.0313 15.0313 18.0313 15.0313 18.0313 15L15.2813 13.1563C15.2813 13.1563 15.2188 13.1875 15.1563 13.2813L14.4688 14.2813C14.0313 14.9063 13.1875 15.0938 12.5625 14.6875C8.62502 12.25 6.18752 8.84377 5.31252 7.46877C4.90627 6.81252 5.06252 5.96878 5.68752 5.53128L6.81252 4.75002V4.71878L4.96877 1.96877C4.96877 1.93752 4.93752 1.93752 4.90627 1.96877L2.37502 3.46878Z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18.3125 8.90633C17.9375 8.90633 17.6563 8.62508 17.625 8.25008C17.375 5.09383 14.7813 2.56258 11.5938 2.34383C11.2188 2.31258 10.9063 2.00008 10.9375 1.59383C10.9688 1.21883 11.2813 0.906333 11.6875 0.937583C15.5625 1.18758 18.7188 4.25008 19.0313 8.12508C19.0625 8.50008 18.7813 8.84383 18.375 8.87508C18.375 8.90633 18.3438 8.90633 18.3125 8.90633Z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M15.2187 9.18755C14.875 9.18755 14.5625 8.93755 14.5312 8.56255C14.3437 6.87505 13.0312 5.56255 11.3437 5.3438C10.9687 5.31255 10.6875 4.93755 10.7187 4.56255C10.75 4.18755 11.125 3.9063 11.5 3.93755C13.8437 4.2188 15.6562 6.0313 15.9375 8.37505C15.9687 8.75005 15.7187 9.0938 15.3125 9.1563C15.25 9.18755 15.2187 9.18755 15.2187 9.18755Z"
+                        fill="currentColor"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_941_15626">
+                        <rect width="20" height="20" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+                <span>+90 216 326 2489</span>
+              </p>
+            </div>
+          </div>
+          <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
+            <div class="mb-10 w-full">
+              <h4 class="mb-9 text-lg font-semibold text-dark">Firma</h4>
+              <ul class="space-y-3">
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="inline-block text-base leading-loose hover:text-blue-700"
+                  >
+                    Hakkımızda
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="inline-block text-base leading-loose hover:text-blue-700"
+                  >
+                    Kalite Politikası
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="inline-block text-base leading-loose hover:text-blue-700"
+                  >
+                    Gizlilik Politikası
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="inline-block text-base leading-loose hover:text-blue-700"
+                  >
+                    Teslimat ve İade
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
+            <div class="mb-10 w-full">
+              <h4 class="mb-9 text-lg font-semibold text-dark">Yardım</h4>
+              <ul class="space-y-3">
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="inline-block text-base leading-loose hover:text-blue-700"
+                  >
+                    Mesafeli Satış Sözleşmesi
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="inline-block text-base leading-loose hover:text-blue-700"
+                  >
+                    Üyelik Sözleşmesi
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="inline-block text-base leading-loose hover:text-blue-700"
+                  >
+                    İnsan Kaynakları
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="inline-block text-base leading-loose hover:text-blue-700"
+                  >
+                    Banka Bilgileri
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-full px-4 sm:w-1/2 lg:w-3/12">
+            <div class="mb-10 w-full">
+              <h4 class="mb-9 text-lg font-semibold text-dark">
+                Bültene Abone Olun
+              </h4>
+              <form class="flex flex-wrap pb-1">
+                <input
+                  type="text"
+                  class="mb-3 mr-3 h-[50px] w-full max-w-[220px] rounded-md border bg-slate-50 px-5 text-sm outline-none focus:border-blue-700 md:max-w-[315px] lg:max-w-[250px] xl:max-w-[315px]"
+                  placeholder="Ad Soyad"
+                />
+                <input
+                  type="email"
+                  class="mb-3 mr-3 h-[50px] w-full max-w-[220px] rounded-md border bg-slate-50 px-5 text-sm outline-none focus:border-blue-700 md:max-w-[315px] lg:max-w-[250px] xl:max-w-[315px]"
+                  placeholder="E-Posta"
+                />
+                <button
+                  class="mb-3 mr-3 h-[50px] w-full max-w-[220px] rounded-md border border-transparent bg-blue-600 px-7 text-white text-base font-medium transition hover:bg-opacity-90 lg:max-w-[250px] xl:max-w-[315px]"
+                >
+                  Abone Ol
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
+            <div class="mb-10 w-full">
+              <h4 class="mb-9 text-lg font-semibold text-dark">
+                Bizi Takip Edin
+              </h4>
+              <div class="mb-6 flex items-center">
+                <a
+                  href="javascript:void(0)"
+                  class="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-blue-700 sm:mr-4 lg:mr-3 xl:mr-4"
+                >
+                  <svg
+                    width="8"
+                    height="16"
+                    viewBox="0 0 8 16"
+                    class="fill-current"
+                  >
+                    <path
+                      d="M7.43902 6.4H6.19918H5.75639V5.88387V4.28387V3.76774H6.19918H7.12906C7.3726 3.76774 7.57186 3.56129 7.57186 3.25161V0.516129C7.57186 0.232258 7.39474 0 7.12906 0H5.51285C3.76379 0 2.54609 1.44516 2.54609 3.5871V5.83226V6.34839H2.10329H0.597778C0.287819 6.34839 0 6.63226 0 7.04516V8.90323C0 9.26452 0.243539 9.6 0.597778 9.6H2.05902H2.50181V10.1161V15.3032C2.50181 15.6645 2.74535 16 3.09959 16H5.18075C5.31359 16 5.42429 15.9226 5.51285 15.8194C5.60141 15.7161 5.66783 15.5355 5.66783 15.3806V10.1419V9.62581H6.13276H7.12906C7.41688 9.62581 7.63828 9.41935 7.68256 9.10968V9.08387V9.05806L7.99252 7.27742C8.01466 7.09677 7.99252 6.89032 7.85968 6.68387C7.8154 6.55484 7.61614 6.42581 7.43902 6.4Z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="javascript:void(0)"
+                  class="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-blue-700 sm:mr-4 lg:mr-3 xl:mr-4"
+                >
+                  <svg
+                    width="16"
+                    height="12"
+                    viewBox="0 0 16 12"
+                    class="fill-current"
+                  >
+                    <path
+                      d="M14.2194 2.06654L15.2 0.939335C15.4839 0.634051 15.5613 0.399217 15.5871 0.2818C14.8129 0.704501 14.0903 0.845401 13.6258 0.845401H13.4452L13.3419 0.751468C12.7226 0.258317 11.9484 0 11.1226 0C9.31613 0 7.89677 1.36204 7.89677 2.93542C7.89677 3.02935 7.89677 3.17025 7.92258 3.26419L8 3.73386L7.45806 3.71037C4.15484 3.61644 1.44516 1.03327 1.00645 0.587084C0.283871 1.76125 0.696774 2.88845 1.13548 3.59296L2.0129 4.90802L0.619355 4.20352C0.645161 5.18982 1.05806 5.96477 1.85806 6.52838L2.55484 6.99804L1.85806 7.25636C2.29677 8.45401 3.27742 8.94716 4 9.13503L4.95484 9.36986L4.05161 9.93346C2.60645 10.8728 0.8 10.8024 0 10.7319C1.62581 11.7652 3.56129 12 4.90323 12C5.90968 12 6.65806 11.9061 6.83871 11.8356C14.0645 10.2857 14.4 4.41487 14.4 3.2407V3.07632L14.5548 2.98239C15.4323 2.23092 15.7935 1.8317 16 1.59687C15.9226 1.62035 15.8194 1.66732 15.7161 1.6908L14.2194 2.06654Z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="javascript:void(0)"
+                  class="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-blue-700 sm:mr-4 lg:mr-3 xl:mr-4"
+                >
+                  <svg
+                    width="16"
+                    height="12"
+                    viewBox="0 0 16 12"
+                    class="fill-current"
+                  >
+                    <path
+                      d="M15.6645 1.88018C15.4839 1.13364 14.9419 0.552995 14.2452 0.359447C13.0065 6.59222e-08 8 0 8 0C8 0 2.99355 6.59222e-08 1.75484 0.359447C1.05806 0.552995 0.516129 1.13364 0.335484 1.88018C0 3.23502 0 6 0 6C0 6 0 8.79263 0.335484 10.1198C0.516129 10.8664 1.05806 11.447 1.75484 11.6406C2.99355 12 8 12 8 12C8 12 13.0065 12 14.2452 11.6406C14.9419 11.447 15.4839 10.8664 15.6645 10.1198C16 8.79263 16 6 16 6C16 6 16 3.23502 15.6645 1.88018ZM6.4 8.57143V3.42857L10.5548 6L6.4 8.57143Z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="javascript:void(0)"
+                  class="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-blue-700 sm:mr-4 lg:mr-3 xl:mr-4"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    class="fill-current"
+                  >
+                    <path
+                      d="M13.0214 0H1.02084C0.453707 0 0 0.451613 0 1.01613V12.9839C0 13.5258 0.453707 14 1.02084 14H12.976C13.5432 14 13.9969 13.5484 13.9969 12.9839V0.993548C14.0422 0.451613 13.5885 0 13.0214 0ZM4.15142 11.9H2.08705V5.23871H4.15142V11.9ZM3.10789 4.3129C2.42733 4.3129 1.90557 3.77097 1.90557 3.11613C1.90557 2.46129 2.45002 1.91935 3.10789 1.91935C3.76577 1.91935 4.31022 2.46129 4.31022 3.11613C4.31022 3.77097 3.81114 4.3129 3.10789 4.3129ZM11.9779 11.9H9.9135V8.67097C9.9135 7.90323 9.89082 6.8871 8.82461 6.8871C7.73571 6.8871 7.57691 7.74516 7.57691 8.60323V11.9H5.51254V5.23871H7.53154V6.16452H7.55423C7.84914 5.62258 8.50701 5.08065 9.52785 5.08065C11.6376 5.08065 12.0232 6.43548 12.0232 8.2871V11.9H11.9779Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <p class="text-base">&copy; 2024 Cabitas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <span class="absolute bottom-0 left-0 z-[-1]">
+          <svg
+            width="217"
+            height="229"
+            viewBox="0 0 217 229"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M-64 140.5C-64 62.904 -1.096 1.90666e-05 76.5 1.22829e-05C154.096 5.49924e-06 217 62.904 217 140.5C217 218.096 154.096 281 76.5 281C-1.09598 281 -64 218.096 -64 140.5Z"
+              fill="url(#paint0_linear_1179_5)"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_1179_5"
+                x1="76.5"
+                y1="281"
+                x2="76.5"
+                y2="1.22829e-05"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#3056D3" stop-opacity="0.08" />
+                <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="absolute right-10 top-10 z-[-1]">
+          <svg
+            width="75"
+            height="75"
+            viewBox="0 0 75 75"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M37.5 -1.63918e-06C58.2107 -2.54447e-06 75 16.7893 75 37.5C75 58.2107 58.2107 75 37.5 75C16.7893 75 -7.33885e-07 58.2107 -1.63918e-06 37.5C-2.54447e-06 16.7893 16.7893 -7.33885e-07 37.5 -1.63918e-06Z"
+              fill="url(#paint0_linear_1179_4)"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_1179_4"
+                x1="-1.63917e-06"
+                y1="37.5"
+                x2="75"
+                y2="37.5"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#13C296" stop-opacity="0.31" />
+                <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+      </div>
+    </footer>
+    <!-- ====== Footer Section End -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  </body>
+  <script src="./js/script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Her bir dil seçeneği için
+      const imageOptions = document.querySelectorAll("#gallery div");
+
+      // Her bir dil seçeneği için tıklama olayını ekle
+      imageOptions.forEach(function (option) {
+        option.addEventListener("click", function (event) {
+          event.preventDefault(); // Sayfanın yeniden yüklenmesini engelle
+
+          // Tıklanan dil seçeneğinin bayrağının URL'sini al
+          const imageUrl = option.querySelector("img").getAttribute("src");
+
+          // Input alanına bayrağın görüntüsünü ekle
+          const inputImage = document.querySelector("#image");
+          inputImage.setAttribute("src", imageUrl);
+        });
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const image = document.getElementById("image");
+      const zoomContainer = image.parentElement;
+
+      zoomContainer.addEventListener("mousemove", (e) => {
+        const rect = image.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const xPercent = (x / rect.width) * 100;
+        const yPercent = (y / rect.height) * 100;
+
+        image.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+        image.style.transform = "scale(1.5)";
+      });
+
+      zoomContainer.addEventListener("mouseleave", () => {
+        image.style.transform = "scale(1)";
+        image.style.transformOrigin = "center center";
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const counterElement = document.getElementById("counter");
+      let counter = parseInt(counterElement.textContent);
+
+      document.getElementById("decreaseBtn").addEventListener("click", () => {
+        if (counter > 0) {
+          counter--;
+          counterElement.textContent = counter;
+        }
+      });
+
+      document.getElementById("increaseBtn").addEventListener("click", () => {
+        counter++;
+        counterElement.textContent = counter;
+      });
+    });
+  </script>
+</html>

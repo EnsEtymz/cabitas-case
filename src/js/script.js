@@ -40,6 +40,8 @@ function isClickOutside(element, resourcesDiv, resourcesButton) {
 document.addEventListener('DOMContentLoaded', () => {
     toggleShow('navbarToggler', 'navbarCollapse');
     toggleShow('resourcesButton', 'resourcesDiv');
+    toggleShow('modalButton', 'default-modal')
+    toggleShow('modalClose', 'default-modal')
 
 
     const resourcesButton = document.getElementById('resourcesButton');
@@ -56,5 +58,40 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Her bir dil seçeneği için
+    const imageOptions = document.querySelectorAll("#gallery div");
+
+    // Her bir dil seçeneği için tıklama olayını ekle
+    imageOptions.forEach(function (option) {
+        option.addEventListener("click", function (event) {
+            event.preventDefault(); // Sayfanın yeniden yüklenmesini engelle
+
+            // Tıklanan dil seçeneğinin bayrağının URL'sini al
+            const imageUrl = option.querySelector("img").getAttribute("src");
+
+            // Input alanına bayrağın görüntüsünü ekle
+            const inputImage = document.querySelector("#image");
+            inputImage.setAttribute("src", imageUrl);
+        });
+    });
+});
 
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const counterElement = document.getElementById("counter");
+    let counter = parseInt(counterElement.textContent);
+
+    document.getElementById("decreaseBtn").addEventListener("click", () => {
+        if (counter > 0) {
+            counter--;
+            counterElement.textContent = counter;
+        }
+    });
+
+    document.getElementById("increaseBtn").addEventListener("click", () => {
+        counter++;
+        counterElement.textContent = counter;
+    });
+});
