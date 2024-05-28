@@ -27,43 +27,59 @@
   <body class="bg-gray-200 flex flex-col justify-between">
     <!-- Header -->
     <nav class="bg-gray-700">
-      <div class="w-full px-2 md:px-12 lg:px-24 py-3 mx-auto">
+      <div class="w-full px-4 md:px-12 lg:px-24 py-3 mx-auto">
         <div class="flex justify-between items-center">
           <ul class="flex flex-row font-medium mt-0 space-x-8 text-sm">
             <li>
               <a
-                href="#"
-                class="text-gray-900 dark:text-white hover:underline"
+                href="./index.html"
+                class="text-white hover:underline text-xs"
                 aria-current="page"
-                >Home</a
+              >
+                <i class="fa-solid fa-house mr-1"></i>
+                Anasayfa</a
+              ><span class="text-white mx-1">></span>
+              <a
+                href="./product.html"
+                class="text-white hover:underline text-xs"
+                aria-current="page"
+              >
+                Ürün Sayfası</a
               >
             </li>
           </ul>
-          <ul class="flex flex-row font-medium mt-0 space-x-8 text-sm">
+          <ul
+            class="hidden md:flex flex-row font-medium mt-0 space-x-8 text-sm"
+          >
             <li>
-              <a href="#" class="text-gray-900 dark:text-white hover:underline"
-                >Sipariş Takip</a
+              <a href="#" class="text-white hover:underline text-xs">
+                <i class="fa-solid fa-location-arrow mr-1"></i>
+                Sipariş Takip</a
               >
             </li>
             <li>
               <a
                 href="./signUp.html"
-                class="text-gray-900 dark:text-white hover:underline"
-                >Kayıt Ol</a
+                class="text-white hover:underline text-xs"
+              >
+                <i class="fa-solid fa-user text-sm mr-1"></i>
+                Kayıt Ol</a
               >
             </li>
             <li>
               <a
                 href="./signIn.html"
-                class="text-gray-900 dark:text-white hover:underline"
-                >Giriş Yap</a
+                class="text-white hover:underline text-xs"
+              >
+                <i class="fa-solid fa-lock text-sm mr-1"></i>
+                Giriş Yap</a
               >
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <header class="flex bg-white px-2 md:px-12 lg:px-24">
+    <header class="flex bg-white px-4 md:px-12 lg:px-24">
       <nav class="w-full bg-white border-gray-200">
         <div
           class="w-full flex flex-wrap items-center justify-between mx-auto py-4"
@@ -72,19 +88,19 @@
             <img
               src="https://fw-capsule.yazalim.com/cdn/assets/capsule/images/logo.png.webp"
               alt="logo"
-              class="h-10"
+              class="h-8"
             />
           </a>
           <div class="flex items-center md:order-2 space-x-1 md:space-x-0">
             <button
-              class="text-center font-medium text-sm mr-2 hover:bg-gray-100 px-4 py-2 rounded-lg"
+              class="text-center font-medium text-sm mr-2 hover:bg-gray-100 px-4 py-2 rounded-lg flex justify-center gap-2"
               type="button"
               data-drawer-target="drawer-example"
               data-drawer-show="drawer-example"
               aria-controls="drawer-example"
             >
-              <i class="fa-solid fa-basket-shopping mr-1"></i>
-              Sepetim
+              <i class="fa-solid fa-basket-shopping flex py-1"></i>
+              <span class="hidden md:flex">Sepetim</span>
             </button>
 
             <button
@@ -96,7 +112,7 @@
                 src="./assets/images/flag-tr-svgrepo-com.svg"
                 class="w-4 h-4 mr-2"
               />
-              Türkçe
+              <span class="hidden md:flex">Türkçe</span>
             </button>
             <!-- Dropdown -->
             <div
@@ -279,7 +295,7 @@
             </button>
           </div>
           <div
-            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            class="items-center justify-between hidden w-full md:w-auto md:order-1"
             id="navbar-language"
           >
             <ul
@@ -290,35 +306,28 @@
                   href="#"
                   class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
                   aria-current="page"
-                  >Home</a
+                  >Anasayfa</a
                 >
               </li>
               <li>
                 <a
                   href="#"
                   class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
-                  >About</a
+                  >Sipariş Takip</a
                 >
               </li>
               <li>
                 <a
                   href="#"
                   class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
-                  >Services</a
+                  >Kayıt Ol</a
                 >
               </li>
               <li>
                 <a
                   href="#"
                   class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
-                  >Pricing</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
-                  >Contact</a
+                  >Giriş Yap</a
                 >
               </li>
             </ul>
@@ -1221,7 +1230,7 @@
           <span class="font-medium text-blue-700">69.80 ₺</span>
         </div>
         <a
-          href="#"
+          href="./address.html"
           class="w-full inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 justify-center"
           ><span>Sepeti Onayla</span>
         </a>

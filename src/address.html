@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cabitas</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
       rel="stylesheet"
@@ -13,19 +14,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <style>
-      .zoom-container {
-        overflow: hidden;
-        position: relative;
-      }
-      .zoom-container img {
-        transition: transform 0.5s ease;
-      }
-    </style>
   </head>
 
   <body class="bg-gray-200 flex flex-col justify-between">
-    <!-- Header -->
+    <!--Header-->
     <nav class="bg-gray-700">
       <div class="w-full px-4 md:px-12 lg:px-24 py-3 mx-auto">
         <div class="flex justify-between items-center">
@@ -40,11 +32,11 @@
                 Anasayfa</a
               ><span class="text-white mx-1">></span>
               <a
-                href="./kurumsal.html"
+                href="./product.html"
                 class="text-white hover:underline text-xs"
                 aria-current="page"
               >
-                Kurumsal</a
+                Adres Bilgileri</a
               >
             </li>
           </ul>
@@ -335,47 +327,118 @@
         </div>
       </nav>
     </header>
+    <!--Header son-->
 
-    <!--Header End-->
+    <!--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    -->
 
     <section class="px-2 py-7 md:px-12 lg:px-24">
-      <div class="w-full flex flex-col rounded bg-white p-8 pb-24">
-        <p class="text-center font-bold text-2xl">Hakkımızda</p>
+      <div class="w-full flex flex-col md:flex-row justify-between gap-5">
+        <div class="w-full md:w-2/3 lg:w-3/4 bg-white rounded-lg p-4">
+          <ol class="flex items-center w-full mb-4 sm:mb-5">
+            <li
+              class="flex w-full items-center text-blue-600 after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block"
+            >
+              <a
+                href="./address.html"
+                class="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-full lg:h-12 lg:w-12 shrink-0"
+              >
+                <i class="fa-solid fa-address-card w-4 h-4"></i>
+              </a>
+            </li>
+            <li
+              class="flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block"
+            >
+              <a
+                href="./payment.html"
+                class="flex items-center justify-center w-10 h-10 bg-gray-100 rounded-full lg:h-12 lg:w-12 shrink-0"
+              >
+                <i class="fa-solid fa-credit-card w-4 h-4"></i>
+              </a>
+            </li>
+            <li class="flex items-center w-full">
+              <a
+                class="flex items-center justify-center w-10 h-10 bg-gray-100 rounded-full lg:h-12 lg:w-12 shrink-0 cursor-pointer"
+              >
+                <i class="fa-solid fa-check w-4 h-4"></i>
+              </a>
+            </li>
+          </ol>
+          <form action="#">
+            <h3 class="mb-4 text-lg font-medium leading-none text-gray-900">
+              Teslimat Adresi
+            </h3>
+            <div class="grid gap-4 mb-4 sm:grid-cols-2">
+              <div
+                class="w-full h-32 border shadow rounded-lg p-4 cursor-pointer hover:border-blue-700 duration-200"
+              >
+                <p class="font-medium mb-2 text-xs lg:text-sm">Ev Adresim</p>
+                <p class="text-xs lg:text-sm">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+                  possimus nesciunt officiis sequi, voluptas impedit explicabo!
+                  Quidem cumque officia quos.
+                </p>
+              </div>
+
+              <div>
+                <div
+                  class="w-full h-32 border shadow rounded-lg p-10 cursor-pointer hover:border-blue-700 duration-200"
+                >
+                  <i class="fa-solid fa-plus text-center w-full"></i>
+                  <p class="font-medium mb-2 text-xs lg:text-sm text-center">
+                    Yeni Adres Ekle
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a
+              href="./payment.html"
+              type="submit"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            >
+              Sonraki Adım: Ödeme Bilgileri
+            </a>
+          </form>
+        </div>
         <div
-          class="pt-4 md:p-8 font-medium md:font-normal flex flex-col gap-3 text-sm/5"
+          class="w-full md:w-1/3 lg:w-1/4 bg-white rounded-lg md:h-96 py-6 md:py-0"
         >
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-            saepe quae consectetur porro est ducimus dicta corporis sequi omnis
-            obcaecati reiciendis rem eius iusto mollitia deserunt velit aut,
-            adipisci expedita.
-          </p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum iure
-            dolore modi ex tenetur incidunt alias culpa velit omnis, numquam
-            earum voluptatum blanditiis repellat ratione ipsum aspernatur, vitae
-            distinctio facere quae pariatur quis cum, beatae veritatis ut.
-            Repudiandae sequi corrupti quisquam deleniti delectus molestias
-            impedit reprehenderit quaerat earum consequuntur rerum saepe quia
-            non reiciendis eius, explicabo labore fugiat et, eligendi doloremque
-            recusandae alias molestiae error architecto. Obcaecati quaerat quod
-            quidem totam architecto sed facilis, ea impedit facere distinctio,
-            accusantium nesciunt. Aut, odit? Assumenda distinctio magni suscipit
-            laborum quisquam dolorem itaque repellendus illo! Culpa eveniet
-            atque facere. Excepturi ducimus repudiandae natus!
-          </p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
-            officiis molestias, doloremque voluptatem ex velit? Voluptatem
-            reiciendis laboriosam consectetur doloribus quidem iure ipsa
-            consequuntur incidunt, ipsum, provident minima. Id libero nesciunt
-            quisquam repudiandae. Doloremque maxime, nemo, fugit nesciunt fuga
-            cum dolorem rerum temporibus labore unde iusto aliquid debitis
-            accusamus assumenda!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at.
-          </p>
+          <p class="font-bold text-center py-4">Sipariş Özeti</p>
+          <div
+            class="w-full text-sm text-left text-gray-500 flex flex-col justify-between lg:py-2"
+          >
+            <div class="w-full flex flex-row justify-between py-2 px-4 lg:px-8">
+              <p class="font-bold text-black">Ürünün Toplamı</p>
+              <p class="font-medium">40,50 TL</p>
+            </div>
+            <div class="w-full flex flex-row justify-between py-2 px-4 lg:px-8">
+              <p class="font-bold text-black">Kargo Toplamı</p>
+              <p class="font-medium">4,50 TL</p>
+            </div>
+            <div class="w-full flex flex-row justify-between py-2 px-4 lg:px-8">
+              <p class="font-bold text-black">Toplam</p>
+              <p class="font-bold text-blue-700">45,00 TL</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -745,140 +808,6 @@
       </div>
     </footer>
     <!-- ====== Footer Section End -->
-    <!--Sepet-->
-    <!-- drawer component -->
-    <div
-      id="drawer-example"
-      class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full w-80 bg-white flex flex-col justify-between"
-      tabindex="-1"
-      aria-labelledby="drawer-label"
-    >
-      <div>
-        <h5
-          id="drawer-label"
-          class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 pl-4"
-        >
-          Sepetteki Ürünler
-        </h5>
-        <button
-          type="button"
-          data-drawer-hide="drawer-example"
-          aria-controls="drawer-example"
-          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 flex items-center justify-center"
-        >
-          <i class="fa-solid fa-xmark mx-auto"></i>
-
-          <span class="sr-only">Close menu</span>
-        </button>
-        <div
-          class="relative w-full h-32 border shadow rounded-lg p-3 mb-2 flex justify-between gap-3 group cursor-pointer"
-        >
-          <div
-            class="hidden group-hover:flex hover:bg-blue-700 absolute w-7 h-7 items-center rounded-full bg-slate-50 border hover:text-white end-0 top-0 duration-200"
-          >
-            <i class="fa-solid fa-xmark mx-auto"></i>
-          </div>
-          <img
-            class="h-auto w-2/5 rounded-lg"
-            src="https://fw-capsule.yazalim.com/cdn/uploads/capsule/products/5/r10065.png.webp"
-            alt=""
-          />
-          <div class="w-3/5 h-full flex flex-col justify-between">
-            <p class="font-medium mb-2 text-xs lg:text-sm">R10065 - Piston</p>
-            <div class="flex justify-between">
-              <div
-                class="w-20 h-6 shadow-sm rounded focus:outline-none border flex flex-row justify-between mb-2"
-              >
-                <button
-                  id="decreaseBtn"
-                  class="w-1/3 h-6 bg-gray-200 rounded-l text-center items-center font-extrabold hover:opacity-90 flex justify-center"
-                >
-                  <i class="fa-solid fa-minus self-center"></i>
-                </button>
-                <div
-                  id="counter"
-                  class="font-medium text-center items-center flex flex-col justify-center w-1/3"
-                >
-                  1
-                </div>
-                <button
-                  id="increaseBtn"
-                  class="w-1/3 h-6 bg-gray-200 rounded-r text-center items-center font-extrabold hover:opacity-90 flex justify-center"
-                >
-                  <i class="fa-solid fa-plus self-center"></i>
-                </button>
-              </div>
-              <span
-                class="flex text-xs lg:text-sm text-blue-700 font-medium text-end"
-              >
-                34.90 ₺
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="relative w-full h-32 border shadow rounded-lg p-3 mb-2 flex justify-between gap-3 group cursor-pointer"
-        >
-          <div
-            class="hidden group-hover:flex hover:bg-blue-700 absolute w-7 h-7 items-center rounded-full bg-slate-50 border hover:text-white end-0 top-0 duration-200"
-          >
-            <i class="fa-solid fa-xmark mx-auto"></i>
-          </div>
-          <img
-            class="h-auto w-2/5 rounded-lg"
-            src="https://fw-capsule.yazalim.com/cdn/uploads/capsule/products/64/r16221.png.webp"
-            alt=""
-          />
-          <div class="w-3/5 h-full flex flex-col justify-between">
-            <p class="font-medium mb-2 text-xs lg:text-sm">
-              R16221 - Vites Dişlisi
-            </p>
-            <div class="flex justify-between">
-              <div
-                class="w-20 h-6 shadow-sm rounded focus:outline-none border flex flex-row justify-between mb-2"
-              >
-                <button
-                  id="decreaseBtn"
-                  class="w-1/3 h-6 bg-gray-200 rounded-l text-center items-center font-extrabold hover:opacity-90 flex justify-center"
-                >
-                  <i class="fa-solid fa-minus self-center"></i>
-                </button>
-                <div
-                  id="counter"
-                  class="font-medium text-center items-center flex flex-col justify-center w-1/3"
-                >
-                  1
-                </div>
-                <button
-                  id="increaseBtn"
-                  class="w-1/3 h-6 bg-gray-200 rounded-r text-center items-center font-extrabold hover:opacity-90 flex justify-center"
-                >
-                  <i class="fa-solid fa-plus self-center"></i>
-                </button>
-              </div>
-              <span
-                class="flex text-xs lg:text-sm text-blue-700 font-medium text-end"
-              >
-                34.90 ₺
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="w-full">
-        <div class="w-full flex flex-row justify-between p-2">
-          <span class="font-medium">Toplam Tutar:</span>
-          <span class="font-medium text-blue-700">69.80 ₺</span>
-        </div>
-        <a
-          href="#"
-          class="w-full inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 justify-center"
-          ><span>Sepeti Onayla</span>
-        </a>
-      </div>
-    </div>
-    <!--Sepet Sonu-->
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   </body>
   <script src="./js/script.js"></script>
