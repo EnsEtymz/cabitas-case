@@ -31,6 +31,8 @@ function hoverShow(buttonId, divId) {
     }
 }
 
+
+
 // Belirtilen elementin resourcesDiv veya resourcesButton olup olmadığını kontrol et
 function isClickOutside(element, resourcesDiv, resourcesButton) {
     return !resourcesDiv.contains(element) && element !== resourcesButton;
@@ -48,10 +50,20 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleShow('modalButton4', 'default-modal')
     toggleShow('modalButton5', 'default-modal')
     toggleShow('modalButton6', 'default-modal')
+    toggleShow('filterclose', 'filtermobile')
+    toggleShow('filtermobilebutton', 'filtermobile')
 
 
-    const resourcesButton = document.getElementById('resourcesButton');
-    const resourcesDiv = document.getElementById('resourcesDiv');
+    toggleShow('sort-menu-button', 'sort-menu')
+    toggleShow('filter-button-0', 'filter-section-0')
+    toggleShow('filter-button-1', 'filter-section-1')
+    toggleShow('section-button-0', 'filter-section-mobile-0')
+    toggleShow('section-button-1', 'filter-section-mobile-1')
+
+
+
+    const resourcesButton = document.getElementById('sort-menu-button');
+    const resourcesDiv = document.getElementById('sort-menu');
 
     if (resourcesButton && resourcesDiv) {
 
@@ -61,7 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
 });
+
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
