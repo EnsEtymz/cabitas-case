@@ -13,10 +13,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <style>
+      .zoom-container {
+        overflow: hidden;
+        position: relative;
+      }
+      .zoom-container img {
+        transition: transform 0.5s ease;
+      }
+    </style>
   </head>
 
   <body class="bg-gray-200 flex flex-col justify-between">
-    <!--Header-->
+    <!-- Header -->
     <nav class="bg-gray-700">
       <div class="w-full px-4 md:px-12 lg:px-24 py-3 mx-auto">
         <div class="flex justify-between items-center">
@@ -31,11 +40,18 @@
                 Anasayfa</a
               ><span class="text-white mx-1">></span>
               <a
-                href="./siparistakip.html"
+                href="./haberler.html"
                 class="text-white hover:underline text-xs"
                 aria-current="page"
               >
-                Sipariş Takip</a
+                Haberler</a
+              ><span class="text-white mx-1">></span>
+              <a
+                href="./haber.html"
+                class="text-white hover:underline text-xs"
+                aria-current="page"
+              >
+                Haber Detayı</a
               >
             </li>
           </ul>
@@ -94,7 +110,6 @@
               class="h-8"
             />
           </a>
-
           <div class="flex items-center md:order-2 space-x-1 md:space-x-0">
             <button
               class="text-center font-medium text-sm mr-2 hover:bg-gray-100 px-4 py-2 rounded-lg flex justify-center gap-2"
@@ -340,33 +355,52 @@
       </nav>
     </header>
 
-    <!--Header Sonu-->
+    <!--Header End-->
 
     <section class="px-2 py-7 md:px-12 lg:px-24">
-      <div class="w-full flex flex-col rounded bg-white p-8 pb-14">
-        <p class="text-center font-bold text-2xl">Sipariş Takip</p>
-        <div class="py-8 flex flex-col gap-3">
-          <img
-            src="https://fw-capsule.yazalim.com/cdn/assets/capsule/images/order_follow_up.png"
-            alt="logo"
-            class="w-80 mx-auto"
-          />
-          <div class="relative w-full md:w-2/3 lg:w-1/3 mx-auto">
-            <input
-              type="search"
-              id="search-dropdown"
-              class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border-s-2 border border-gray-300 focus:ring-gray-500 focus:border-gray-500"
-              placeholder="Sipariş Kodunu Giriniz."
-              required
-            />
-            <button
-              type="submit"
-              class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-gray-700 rounded-e-lg border border-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300"
-            >
-              <i class="fa-solid fa-location-arrow w-4 h-4"></i>
-              <span class="sr-only">Search</span>
-            </button>
-          </div>
+      <div class="w-full flex flex-col rounded bg-white p-8 pb-24">
+        <img
+          src="https://fw-capsule.yazalim.com/cdn/uploads/capsule/news/1/th-haber-1.png.webp"
+          class="block w-2/5 mt-2 mx-auto rounded-t-lg"
+          alt="..."
+        />
+        <p class="p-8 font-bold text-2xl">Lorem ipsum dolor sit amet.</p>
+
+        <div
+          class="pt-4 md:p-8 font-medium md:font-normal flex flex-col gap-3 text-sm/5"
+        >
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+            saepe quae consectetur porro est ducimus dicta corporis sequi omnis
+            obcaecati reiciendis rem eius iusto mollitia deserunt velit aut,
+            adipisci expedita.
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum iure
+            dolore modi ex tenetur incidunt alias culpa velit omnis, numquam
+            earum voluptatum blanditiis repellat ratione ipsum aspernatur, vitae
+            distinctio facere quae pariatur quis cum, beatae veritatis ut.
+            Repudiandae sequi corrupti quisquam deleniti delectus molestias
+            impedit reprehenderit quaerat earum consequuntur rerum saepe quia
+            non reiciendis eius, explicabo labore fugiat et, eligendi doloremque
+            recusandae alias molestiae error architecto. Obcaecati quaerat quod
+            quidem totam architecto sed facilis, ea impedit facere distinctio,
+            accusantium nesciunt. Aut, odit? Assumenda distinctio magni suscipit
+            laborum quisquam dolorem itaque repellendus illo! Culpa eveniet
+            atque facere. Excepturi ducimus repudiandae natus!
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
+            officiis molestias, doloremque voluptatem ex velit? Voluptatem
+            reiciendis laboriosam consectetur doloribus quidem iure ipsa
+            consequuntur incidunt, ipsum, provident minima. Id libero nesciunt
+            quisquam repudiandae. Doloremque maxime, nemo, fugit nesciunt fuga
+            cum dolorem rerum temporibus labore unde iusto aliquid debitis
+            accusamus assumenda!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at.
+          </p>
         </div>
       </div>
     </section>
@@ -862,13 +896,14 @@
           <span class="font-medium text-blue-700">69.80 ₺</span>
         </div>
         <a
-          href="./address.html"
+          href="#"
           class="w-full inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 justify-center"
           ><span>Sepeti Onayla</span>
         </a>
       </div>
     </div>
     <!--Sepet Sonu-->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   </body>
   <script src="./js/script.js"></script>
