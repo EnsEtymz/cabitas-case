@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleShow('modalButton6', 'default-modal')
     toggleShow('filterclose', 'filtermobile')
     toggleShow('filtermobilebutton', 'filtermobile')
+    toggleShow('search-button', 'search')
 
 
     toggleShow('sort-menu-button', 'sort-menu')
@@ -69,6 +70,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.addEventListener("click", (event) => {
             if (isClickOutside(event.target, resourcesDiv, resourcesButton)) {
+                resourcesDiv.classList.add("hidden");
+            }
+        });
+    }
+
+
+    const Button = document.getElementById('search-button');
+    const Div = document.getElementById('search');
+
+    if (Button && Div) {
+
+        document.addEventListener("click", (event) => {
+            if (isClickOutside(event.target, Div, Button)) {
+                Div.classList.add("hidden");
+            }
+        });
+    }
+
+
+
+    const searchbutton = document.getElementById('search-button');
+    const search = document.getElementById('search');
+
+    if (searchbutton && search) {
+
+        document.addEventListener("click", (event) => {
+            if (isClickOutside(event.target, search, searchbutton)) {
                 resourcesDiv.classList.add("hidden");
             }
         });
@@ -97,6 +125,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
 
 
 
