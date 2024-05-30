@@ -125,7 +125,7 @@
               <span class="sr-only">Search</span>
             </button>
           </div>
-          <div class="absolute w-11/12 hidden" id="search">
+          <div class="absolute w-11/12 hidden z-30" id="search">
             <input
               type="search"
               class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border-s-2 border border-gray-300 focus:ring-gray-500 focus:border-gray-500"
@@ -449,552 +449,142 @@
   
         Off-canvas filters for mobile, show/hide based on off-canvas filters state.
       -->
-        <div class="relative z-40 lg:hidden" role="dialog" aria-modal="true">
-          <!--
-          Off-canvas menu backdrop, show/hide based on off-canvas menu state.
-  
-          Entering: "transition-opacity ease-linear duration-300"
-            From: "opacity-0"
-            To: "opacity-100"
-          Leaving: "transition-opacity ease-linear duration-300"
-            From: "opacity-100"
-            To: "opacity-0"
-        -->
 
-          <div id="filtermobile" class="fixed inset-0 z-40 hidden">
-            <!--
-            Off-canvas menu, show/hide based on off-canvas menu state.
-  
-            Entering: "transition ease-in-out duration-300 transform"
-              From: "translate-x-full"
-              To: "translate-x-0"
-            Leaving: "transition ease-in-out duration-300 transform"
-              From: "translate-x-0"
-              To: "translate-x-full"
-          -->
-            <div
-              id="filter-mobile"
-              class="relative ml-auto h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl"
+        <!--Sepet-->
+        <!-- drawer component -->
+        <div
+          id="drawer-right-example"
+          class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-80 dark:bg-gray-800"
+          tabindex="-1"
+          aria-labelledby="drawer-right-label"
+        >
+          <div>
+            <h5
+              id="drawer-label"
+              class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 pl-4"
             >
-              <div class="flex items-center justify-between px-4">
-                <h2 class="text-lg font-medium text-gray-900">Filters</h2>
-                <button
-                  id="filterclose"
-                  type="button"
-                  class="-mr-2 flex h-10 w-10 items-center justify-center rounded-md bg-white p-2 text-gray-400"
-                >
-                  <span class="sr-only">Close menu</span>
-                  <svg
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
+              Sepetteki Ürünler
+            </h5>
+            <button
+              type="button"
+              data-drawer-hide="drawer-example"
+              aria-controls="drawer-example"
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 flex items-center justify-center"
+            >
+              <i class="fa-solid fa-xmark mx-auto"></i>
+
+              <span class="sr-only">Close menu</span>
+            </button>
+            <div
+              class="relative w-full h-32 border shadow rounded-lg p-3 mb-2 flex justify-between gap-3 group cursor-pointer"
+            >
+              <div
+                class="hidden group-hover:flex hover:bg-blue-700 absolute w-7 h-7 items-center rounded-full bg-slate-50 border hover:text-white end-0 top-0 duration-200"
+              >
+                <i class="fa-solid fa-xmark mx-auto"></i>
               </div>
-
-              <!-- Filters -->
-              <form class="mt-4 border-t border-gray-200">
-                <h3 class="sr-only">Categories</h3>
-                <ul role="list" class="px-2 py-3 font-medium text-gray-900">
-                  <li class="hover:bg-gray-100 rounded-lg">
-                    <a href="#" class="block px-2 py-3">Akslar</a>
-                  </li>
-                  <li class="hover:bg-gray-100 rounded-lg">
-                    <a href="#" class="block px-2 py-3">Egzoz Sistemi</a>
-                  </li>
-                  <li class="hover:bg-gray-100 rounded-lg">
-                    <a href="#" class="block px-2 py-3">Kauçuk/Hortum</a>
-                  </li>
-                  <li class="hover:bg-gray-100 rounded-lg">
-                    <a href="#" class="block px-2 py-3">Motor</a>
-                  </li>
-                  <li class="hover:bg-gray-100 rounded-lg">
-                    <a href="#" class="block px-2 py-3">Beşik</a>
-                  </li>
-                  <li class="hover:bg-gray-100 rounded-lg">
-                    <a href="#" class="block px-2 py-3">Debriyaj</a>
-                  </li>
-                  <li class="hover:bg-gray-100 rounded-lg">
-                    <a href="#" class="block px-2 py-3">Defransiyel</a>
-                  </li>
-                  <li class="hover:bg-gray-100 rounded-lg">
-                    <a href="#" class="block px-2 py-3">Dorse</a>
-                  </li>
-                </ul>
-
-                <div class="border-t border-gray-200 px-4 py-6">
-                  <h3 class="-mx-2 -my-3 flow-root">
-                    <!-- Expand/collapse section button -->
+              <img
+                class="h-auto w-2/5 rounded-lg"
+                src="https://fw-capsule.yazalim.com/cdn/uploads/capsule/products/5/r10065.png.webp"
+                alt=""
+              />
+              <div class="w-3/5 h-full flex flex-col justify-between">
+                <p class="font-medium mb-2 text-xs lg:text-sm">
+                  R10065 - Piston
+                </p>
+                <div class="flex justify-between">
+                  <div
+                    class="w-20 h-6 shadow-sm rounded focus:outline-none border flex flex-row justify-between mb-2"
+                  >
                     <button
-                      id="section-button-0"
-                      type="button"
-                      class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500"
-                      aria-controls="filter-section-mobile-0"
-                      aria-expanded="false"
+                      id="decreaseBtn"
+                      class="w-1/3 h-6 bg-gray-200 rounded-l text-center items-center font-extrabold hover:opacity-90 flex justify-center"
                     >
-                      <span class="font-medium text-gray-900">Markalar</span>
-                      <span class="ml-6 flex items-center">
-                        <!-- Expand icon, show/hide based on section open state. -->
-                        <svg
-                          class="h-5 w-5"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"
-                          />
-                        </svg>
-                      </span>
+                      <i class="fa-solid fa-minus self-center"></i>
                     </button>
-                  </h3>
-                  <!-- Filter section, show/hide based on section state. -->
-                  <div class="pt-6 hidden" id="filter-section-mobile-0">
-                    <div class="space-y-6">
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-color-0"
-                          name="color[]"
-                          value="white"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-color-0"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >MAN</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-color-1"
-                          name="color[]"
-                          value="beige"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-color-1"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >MERCEDES</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-color-2"
-                          name="color[]"
-                          value="blue"
-                          type="checkbox"
-                          checked
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-color-2"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >RENAULT</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-color-3"
-                          name="color[]"
-                          value="brown"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-color-3"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >SCANIA</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-color-4"
-                          name="color[]"
-                          value="green"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-color-4"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >VOLVO</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-color-5"
-                          name="color[]"
-                          value="purple"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-color-5"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >DAF</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-color-5"
-                          name="color[]"
-                          value="purple"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-color-5"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >FORD</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-color-5"
-                          name="color[]"
-                          value="purple"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-color-5"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >IVECO</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-color-5"
-                          name="color[]"
-                          value="purple"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-color-5"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >BMC</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-color-5"
-                          name="color[]"
-                          value="purple"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-color-5"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >BOSCH</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-color-5"
-                          name="color[]"
-                          value="purple"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-color-5"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >FIAT</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-color-5"
-                          name="color[]"
-                          value="purple"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-color-5"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >HYUNDAI</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-color-5"
-                          name="color[]"
-                          value="purple"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-color-5"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >BMW</label
-                        >
-                      </div>
+                    <div
+                      id="counter"
+                      class="font-medium text-center items-center flex flex-col justify-center w-1/3"
+                    >
+                      1
                     </div>
-                  </div>
-                </div>
-                <div class="border-t border-gray-200 px-4 py-6">
-                  <h3 class="-mx-2 -my-3 flow-root">
-                    <!-- Expand/collapse section button -->
                     <button
-                      id="section-button-1"
-                      type="button"
-                      class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500"
-                      aria-controls="filter-section-mobile-1"
-                      aria-expanded="false"
+                      id="increaseBtn"
+                      class="w-1/3 h-6 bg-gray-200 rounded-r text-center items-center font-extrabold hover:opacity-90 flex justify-center"
                     >
-                      <span class="font-medium text-gray-900">Category</span>
-                      <span class="ml-6 flex items-center">
-                        <!-- Expand icon, show/hide based on section open state. -->
-                        <svg
-                          class="h-5 w-5"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"
-                          />
-                        </svg>
-                      </span>
+                      <i class="fa-solid fa-plus self-center"></i>
                     </button>
-                  </h3>
-                  <!-- Filter section, show/hide based on section state. -->
-                  <div class="pt-6 hidden" id="filter-section-mobile-1">
-                    <div class="space-y-6">
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-category-0"
-                          name="category[]"
-                          value="new-arrivals"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-category-0"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >ISUZU</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-category-1"
-                          name="category[]"
-                          value="sale"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-category-1"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >KNORR</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-category-2"
-                          name="category[]"
-                          value="travel"
-                          type="checkbox"
-                          checked
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-category-2"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >WABCO</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-category-3"
-                          name="category[]"
-                          value="organization"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-category-3"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >DORSE</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-category-4"
-                          name="category[]"
-                          value="accessories"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-category-4"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >DODGE</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-category-0"
-                          name="category[]"
-                          value="new-arrivals"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-category-0"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >HELLA</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-category-1"
-                          name="category[]"
-                          value="sale"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-category-1"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >FAG</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-category-2"
-                          name="category[]"
-                          value="travel"
-                          type="checkbox"
-                          checked
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-category-2"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >SKF</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-category-3"
-                          name="category[]"
-                          value="organization"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-category-3"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >INA</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-category-4"
-                          name="category[]"
-                          value="accessories"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-category-4"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >SAF</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-category-0"
-                          name="category[]"
-                          value="new-arrivals"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-category-0"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >M+H</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-category-1"
-                          name="category[]"
-                          value="sale"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-category-1"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >FODEN</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-category-2"
-                          name="category[]"
-                          value="travel"
-                          type="checkbox"
-                          checked
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-category-2"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >MAHLE</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-category-3"
-                          name="category[]"
-                          value="organization"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-category-3"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >HENGST</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="filter-mobile-category-4"
-                          name="category[]"
-                          value="accessories"
-                          type="checkbox"
-                          class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <label
-                          for="filter-mobile-category-4"
-                          class="ml-3 min-w-0 flex-1 text-gray-500"
-                          >DONALDSON</label
-                        >
-                      </div>
-                    </div>
                   </div>
+                  <span
+                    class="flex text-xs lg:text-sm text-blue-700 font-medium text-end"
+                  >
+                    34.90 ₺
+                  </span>
                 </div>
-              </form>
+              </div>
+            </div>
+            <div
+              class="relative w-full h-32 border shadow rounded-lg p-3 mb-2 flex justify-between gap-3 group cursor-pointer"
+            >
+              <div
+                class="hidden group-hover:flex hover:bg-blue-700 absolute w-7 h-7 items-center rounded-full bg-slate-50 border hover:text-white end-0 top-0 duration-200"
+              >
+                <i class="fa-solid fa-xmark mx-auto"></i>
+              </div>
+              <img
+                class="h-auto w-2/5 rounded-lg"
+                src="https://fw-capsule.yazalim.com/cdn/uploads/capsule/products/64/r16221.png.webp"
+                alt=""
+              />
+              <div class="w-3/5 h-full flex flex-col justify-between">
+                <p class="font-medium mb-2 text-xs lg:text-sm">
+                  R16221 - Vites Dişlisi
+                </p>
+                <div class="flex justify-between">
+                  <div
+                    class="w-20 h-6 shadow-sm rounded focus:outline-none border flex flex-row justify-between mb-2"
+                  >
+                    <button
+                      id="decreaseBtn"
+                      class="w-1/3 h-6 bg-gray-200 rounded-l text-center items-center font-extrabold hover:opacity-90 flex justify-center"
+                    >
+                      <i class="fa-solid fa-minus self-center"></i>
+                    </button>
+                    <div
+                      id="counter"
+                      class="font-medium text-center items-center flex flex-col justify-center w-1/3"
+                    >
+                      1
+                    </div>
+                    <button
+                      id="increaseBtn"
+                      class="w-1/3 h-6 bg-gray-200 rounded-r text-center items-center font-extrabold hover:opacity-90 flex justify-center"
+                    >
+                      <i class="fa-solid fa-plus self-center"></i>
+                    </button>
+                  </div>
+                  <span
+                    class="flex text-xs lg:text-sm text-blue-700 font-medium text-end"
+                  >
+                    34.90 ₺
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
+          <div class="w-full pb-8">
+            <div class="w-full flex flex-row justify-between p-2">
+              <span class="font-medium">Toplam Tutar:</span>
+              <span class="font-medium text-blue-700">69.80 ₺</span>
+            </div>
+            <a
+              href="./address.html"
+              class="w-full inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 justify-center"
+              ><span>Sepeti Onayla</span>
+            </a>
+          </div>
         </div>
+        <!--Sepet Sonu-->
 
         <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 min-h-[600px]">
           <div
@@ -1010,11 +600,12 @@
               <div class="relative inline-block text-left">
                 <div>
                   <button
-                    type="button"
                     class="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900"
-                    id="sort-menu-button"
-                    aria-expanded="false"
-                    aria-haspopup="true"
+                    type="button"
+                    data-drawer-target="drawer-right-example"
+                    data-drawer-show="drawer-right-example"
+                    data-drawer-placement="right"
+                    aria-controls="drawer-right-example"
                   >
                     Sort
                     <svg
